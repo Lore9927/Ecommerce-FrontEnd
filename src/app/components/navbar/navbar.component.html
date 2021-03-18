@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light fixed-top">
+    <span class="navbar-brand mb-0 h1">E-commerce</span>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <button (click)="viewItems()" class="nav-link btn btn-link p-0">Articoli</button>
+        </li>
+    </ul>
+
+    <span class="navbar-text">
+        <button (click)="viewCart()" type="button" class="btn btn-primary">
+            Carrello <span class="badge badge-light">{{getBadge()}}</span>
+        </button>
+    </span>
+</nav>

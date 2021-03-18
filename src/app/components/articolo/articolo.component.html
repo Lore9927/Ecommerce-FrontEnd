@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div *ngIf="!errorMessage;else empty">
+    <div class="card-columns text-center">
+        <div *ngFor="let articolo of articoli">
+            <div class="card" style="left: 50%;">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h5>{{articolo.nomeArticolo}}</h5>
+                    </div>
+                    <p class="card-text small text-muted text-uppercase mb-2">Disponibilita: {{articolo.disponibilita}}
+                    </p>
+                    <hr>
+                    <p class="card-text text-secondary">{{articolo.prezzoUnitario}}€</p>
+                    <button (click)="addItemToCart(articolo.codiceArticolo,'1')"
+                        class="btn btn-primary">Aggiungi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #empty>
+    <div class="alert alert-danger" role="alert">
+        Errore durante la visualizzazione degli articoli
+    </div>
+</ng-template>

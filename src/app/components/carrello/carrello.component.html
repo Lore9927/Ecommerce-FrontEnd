@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div *ngIf="!emptyCart;else empty">
+    <h1>Il tuo carrello</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Articolo</th>
+                <th scope="col">Quantità</th>
+                <th scope="col">Prezzo Unitario</th>
+                <th scope="col">Totale</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let rigaCarrello of righeCarrello">
+                <td>{{rigaCarrello.articolo.nomeArticolo}}</td>
+                <td>{{rigaCarrello.quantita}}</td>
+                <td>{{rigaCarrello.articolo.prezzoUnitario}}€</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{total()}}€</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #empty>
+    <div class="alert alert-info" role="alert">
+        Il tuo carrello è vuoto
+    </div>
+</ng-template>

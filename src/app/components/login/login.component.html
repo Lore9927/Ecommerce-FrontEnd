@@ -1,0 +1,29 @@
+<div class="row justify-content-md-center my-5">
+    <div class="col-lg-4 col-md-6">
+      <div class="card shadow-lg p-3">
+        <h3 class="my-3 text-center">Accedi</h3>
+        <input
+          class="form-control my-1"
+          type="text"
+          [(ngModel)]="nome"
+          placeholder="Your Username *"
+        />
+        <input
+          class="form-control my-1"
+          type="password"
+          [(ngModel)]="password"
+          placeholder="Your Password *"
+        />
+  
+        <button
+          class="btn btn-primary btn-sm d-block mx-auto px-5 rounded-pill"
+          (click)="login()"
+        >
+          LOGIN
+        </button>
+        <div *ngIf="showErrorMessage" class="alert alert-danger my-2">
+          Username e password sbagliati, riprova!
+        </div>
+      </div>
+    </div>
+  </div>
