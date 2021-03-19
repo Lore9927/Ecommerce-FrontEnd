@@ -8,7 +8,7 @@
 
     <span class="navbar-text">
         <button (click)="viewCart()" type="button" class="btn btn-primary">
-            Carrello <span class="badge badge-light">{{getBadge()}}</span>
+            Carrello <span class="badge badge-light" *ngIf="getBadge()!=0">{{getBadge()}}</span>
         </button>
     </span>
 </nav>
