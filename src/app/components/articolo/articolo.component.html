@@ -3,6 +3,8 @@
     <div class="card-columns text-center">
         <div *ngFor="let articolo of articoli">
             <div class="card" style="left: 50%;">
+                <img class="img-fluid w-100" src="assets/images/image-not-available.png" alt="Sample">
+
                 <div class="card-body">
                     <div class="card-title">
                         <h5>{{articolo.nomeArticolo}}</h5>
@@ -11,7 +13,7 @@
                     </p>
                     <hr>
                     <p class="card-text text-secondary">{{articolo.prezzoUnitario}}€</p>
-                    <button (click)="addItemToCart(articolo.codiceArticolo,'1')"
+                    <button (click)="addItemToCart(articolo.codiceArticolo,'1');"
                         class="btn btn-primary">Aggiungi</button>
                 </div>
             </div>
