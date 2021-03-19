@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light bg-light fixed-top">
+<nav class="navbar navbar-light fixed-top" style="background-color: #e3f2fd;">
     <span class="navbar-brand mb-0 h1">E-commerce</span>
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -7,7 +7,7 @@
     </ul>
 
     <span class="navbar-text">
-        <button (click)="viewCart()" type="button" class="btn btn-primary">
+        <button (click)="viewCart()" type="button" class="btn btn-outline-primary my-2 my-sm-0">
             Carrello <span class="badge badge-light" *ngIf="getBadge()!=0">{{getBadge()}}</span>
         </button>
     </span>
