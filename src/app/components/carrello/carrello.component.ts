@@ -23,7 +23,7 @@ export class CarrelloComponent implements OnInit {
 
   viewCart() {
     let token = this.jwtServ.retrieveJWTToken();
-    let cartObs = this.carrelloServ.checkCart(token);
+    let cartObs = this.carrelloServ.getCart(token);
     cartObs.subscribe(
       (data) => {
         this.righeCarrello = data.dettagli;

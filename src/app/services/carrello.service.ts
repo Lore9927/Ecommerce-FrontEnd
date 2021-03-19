@@ -47,7 +47,7 @@ export class CarrelloService {
       this.badge = value;
   }
 
-  checkCart(token: string) {
+  getCart(token: string) {
     let resp: Observable<any>;
 
     resp = this.http.get(this.BASE_URL + '/carrello/get-cart', {

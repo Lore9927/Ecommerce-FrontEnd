@@ -53,7 +53,7 @@ export class ArticoloComponent implements OnInit {
 
   checkCart() {
     let dettagli = []
-    let articoloObs = this.carrelloServ.checkCart(this.token);
+    let articoloObs = this.carrelloServ.getCart(this.token);
     articoloObs.subscribe(
       (data) => {
         dettagli = data.dettagli;
